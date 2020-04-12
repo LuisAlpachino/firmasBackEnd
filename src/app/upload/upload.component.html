@@ -1,0 +1,14 @@
+<h3 class="pt-5">{{nameTitle}}</h3>
+<div class="input-group">
+  <div class="custom-file">
+    <input type="file" name="pfd" class="custom-file-input" id="inputGroupFile04" >
+    <label class="custom-file-label" for="inputGroupFile04">Elegir archivo</label>
+    <label class="custom-file-label" *ngIf="uploadedFilePath" for="inputGroupFile04"> {{uploadedFilePath}}</label>
+  </div>
+</div>
+<div class="" *ngIf="fileUploadProgress">
+  Upload progress: {{ fileUploadProgress }}
+</div>
+
+
+

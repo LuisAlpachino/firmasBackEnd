@@ -1,0 +1,61 @@
+
+<div class="col-md-4 mb-3">
+  <label for="firstName">Nombre(s)</label>
+  <input [(ngModel)]="nombre" type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+  <div class="invalid-feedback">
+    El nombre es un campo requerido.
+  </div>
+</div>
+
+<div class="col-md-4 mb-3">
+  <label  for="names">CURP</label>
+  <input (keyup)="llamarCP($event)"  type="text" class="form-control" id="names" placeholder="" value="" required="">
+  <div class="invalid-feedback">
+  </div>
+</div>
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+    <div *ngFor="let localidad of arrayCodigo">
+      <button class="dropdown-item" type="button">{{localidad.locality}}</button>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <h2>Localidades</h2>
+  <form>
+    <div class="form-group">
+      <select class="form-control" id="sel1">
+        <option>Selecciona una localidad</option>
+        <option *ngFor="let localidad of arrayCodigo">{{localidad.locality}}</option>
+      </select>
+    </div>
+  </form>
+</div>
+
+
+<ul>
+  <li *ngFor="let localidad of arrayCodigo"  >
+    {{localidad.locality}}
+  </li>
+</ul>
+<div class="col-md-4 mb-3">
+  <label  for="codi">codigo postal</label>
+  <input [value]="estado" type="text" class="form-control overflow-hidden" id="codi" placeholder="" value="" required="" readonly="readonly">
+  <div class="invalid-feedback">
+  </div>
+</div>
+
+<hr class="mb-4">
+<button (click)="addName()" class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
+
+
+<ul>
+  <li *ngFor="let usuario of usuarios;let i=index;">
+    {{usuario.api_token}}
+  </li>
+</ul>
+

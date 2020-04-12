@@ -1,0 +1,28 @@
+<div class="container pt-5">
+  <div class="row">
+    <div class="col-md-7 offset-md-3">
+      <app-upload nameTitle="Acta de nacimiento"
+                  (change)="fileActa($event)"
+                  [uploadedFilePath]="actaPath">
+      </app-upload>
+      <app-upload nameTitle="CURP"
+                  (change)="fileCurp($event)"
+                  [uploadedFilePath]="curpPath">
+      </app-upload>
+      <app-upload nameTitle="Identifiación Oficial(INE)"
+                  (change)="fileIne($event)"
+                  [uploadedFilePath]="credencialPath">
+      </app-upload>
+      <app-upload nameTitle="Comprobante de Domicilio"
+                  (change)="filedomicilio($event)"
+                  [fileUploadProgress]="fileUploadProgress"
+                  [uploadedFilePath]="domicilioPath">
+      </app-upload>
+      <div class="justify-content-center text-center pt-5">
+        <button class="btn btn-primary"   (click)="onSubmit()">Enviar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
